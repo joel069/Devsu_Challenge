@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: spring-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7076:7076"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://srvdb:5432/devsu
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      - srvdb
+    networks:
+      - my-network
+
+  srvdb:
+    image: postgres
+    container_name: srvdb
+    hostname: srvdb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: devsu
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./BaseDatos.sql:/docker-entrypoint-initdb.d/BaseDatos.sql
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 10s
+      retries: 5
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "05f33a5b-703f-44e5-bfa2-d363a0553230",
+		"name": "DEVSU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23723333"
+	},
+	"item": [
+		{
+			"name": "CLIENT",
+			"item": [
+				{
+					"name": "FIND ALL CLIENTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7076/devsu/clients/findAllClients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"clients",
+								"findAllClients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND CLIENT BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/clients/findClientById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"clients",
+								"findClientById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE CLIENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"personDni\": \"0106588437\",\r\n  \"personName\": \"JOEL VASQUEZ\",\r\n  \"personGenre\": \"MASCULINO\",\r\n  \"personAge\": 30,\r\n  \"personAddress\": \"Calle CUENCA 123\",\r\n  \"personPhoneNumber\": \"0987654321\",\r\n  \"clientState\": true,\r\n  \"clientPassword\": \"1569897\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/clients/saveClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"clients",
+								"saveClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH UPDATE CLIENT",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"personAge\": 40,\r\n  \"personAddress\": \"FELIPE SEGUNDO Y GREGORIO MARANON\",\r\n  \"personPhoneNumber\": \"0987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/clients/updateClient/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"clients",
+								"updateClient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CLIENT PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"personDni\": \"0106588437\",\r\n  \"personName\": \"JUAN ALVAREZ\",\r\n  \"personGenre\": \"MASCULINO\",\r\n  \"personAge\": 60,\r\n  \"personAddress\": \"Calle LAS LOMAS 123\",\r\n  \"personPhoneNumber\": \"0987654321\",\r\n  \"clientState\": true,\r\n  \"clientPassword\": \"8989\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/clients/updateClientAllData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"clients",
+								"updateClientAllData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CLIENT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userDni\": \"0106588437\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/clients/deleteClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"clients",
+								"deleteClient"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ACCOUNTS",
+			"item": [
+				{
+					"name": "FIND ALL ACCOUNTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7076/devsu/accounts/findAllAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"accounts",
+								"findAllAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE ACCOUNT ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clienteId\": 3,\r\n  \"numeroCuenta\": \"123456987\",\r\n  \"tipoCuenta\": \"CORRIENTE\",\r\n  \"saldoInicial\": 1000.00,\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/accounts/saveAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"accounts",
+								"saveAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ACCOUNT PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"55555555555s55\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/accounts/updateAccount/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"accounts",
+								"updateAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ACCOUNT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"55555555555s55ssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/accounts/deleteAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"accounts",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ACCOUNT AL DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"123456789012\",\r\n    \"tipoCuenta\": \"CREDIT\",\r\n    \"saldoInicial\": 1000.50,\r\n    \"clienteCedula\": \"0106588437\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/accounts/updateAccountAllData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"accounts",
+								"updateAccountAllData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MOVEMENTS",
+			"item": [
+				{
+					"name": "GET MOVEMENTS BY ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"accountNumber\": \"12345678901222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/getMovementByAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"getMovementByAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL MOVEMENTS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/getAllMovements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"getAllMovements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOVEMENT BY DNI",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userDni\": \"0106588437\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/getMovementByDni",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"getMovementByDni"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MAKE MOVEMENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountNumber\": \"123456987\",\r\n  \"value\": 250.00,\r\n  \"movementType\": \"RETIRO\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/makeMovement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"makeMovement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENERAE REPORT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientDni\": \"0106588437\",\r\n    \"initialDate\": \"2024-07-01T00:00:00\",\r\n    \"finalDate\": \"2024-07-31T23:59:59\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/generateReport",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"generateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH MOVEMENT ",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movementType\": \"DEPOSIT\",\r\n    \"movementAmount\": 1000.00,\r\n    \"movementBalance\": 5000.00,\r\n    \"movementState\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/updateMovement/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"updateMovement",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MOVEMENT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movementId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7076/devsu/movement/deleteMovement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7076",
+							"path": [
+								"devsu",
+								"movement",
+								"deleteMovement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
